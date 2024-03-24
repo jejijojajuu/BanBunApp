@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/resources"
+        android:title="Resources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_assignment_24"/>
+
+    <item
+        android:id="@+id/classifier"
+        android:title="Classifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_photo_camera_24"/>
+
+    <item
+        android:id="@+id/guide"
+        android:title="Guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_feedback_24"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_account_circle_24"/>
+</menu>

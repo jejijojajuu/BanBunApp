@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".BBTV">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/bbtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp"
+            android:text="Banana Bunchy Top Virus"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/guide1"
+            android:layout_width="320dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/bbtv"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/bbtv"
+            android:background="@drawable/image_border"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/guide1"
+            android:layout_marginTop="30dp"
+            android:text="      Banana bunchy top disease (BBTD), caused by the Banana bunchy top virus (BBTV) belonging to the family Nanoviridae and genus Babuvirus, poses a significant economic threat to banana cultivation in various production regions, including Asia, Africa, and the South Pacific. \n\nThe virus was initially reported in Hawai‘i in 1989 and has since progressively spread throughout banana-growing areas in the island chain. BBTV stands as a major challenge to local banana production in Hawai‘i. \n\nIn March 2003, a pest-management strategic plan for banana production in Hawai‘i listed managing BBTV as the top research priority. Early BBTV infections result in fruitless banana plants, and the fruit of later-infected plants is typically stunted and unsuitable for the market. \n\nAdditionally, the virus spreads to suckers via the rhizome, leading to the eventual infection of the entire banana mat. The transmission of Banana bunchy top virus occurs in a circulative, persistent, non-propagative manner through the banana aphid, Pentalonia nigronervosa Coquerel."
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_font"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/details"
+            android:text="Source: \nhttps://cms.ctahr.hawaii.edu/wangkh/Research-and-Extension/Banana-IPM/Guidebook/CHPT2-BBTV"
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="370dp"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/source"/>
+
+        <TextView
+            android:id="@+id/title_symptoms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/line"
+            android:text="Symptoms"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <TextView
+            android:id="@+id/of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title_symptoms"
+            android:text="of BBTV-infected plants"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title" />
+
+        <ImageView
+            android:id="@+id/symptom1"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/of"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s1"
+            android:background="@drawable/border_thin"
+            android:paddingVertical="7dp"/>
+
+        <TextView
+            android:id="@+id/descrip1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/symptom1"
+            android:text="1. Initial symptoms after BBTV
+infection: slightly chlorotic leaves with pale leaf margins and prolonged unfolding of cigar leaves (> 5 days)."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <ImageView
+            android:id="@+id/symptom2"
+            android:layout_width="200dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/descrip1"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s2"
+            android:background="@drawable/border_thin"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/descrip2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/symptom2"
+            android:text="2. Infected leaves are lighter in color compared to healthy leaves, as chlorophyll content is much lower in BBTV-infected plants (Hooks et al. 2007, 2009)"
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <ImageView
+            android:id="@+id/symptom3"
+            android:layout_width="200dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/descrip2"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s3"
+            android:background="@drawable/border_thin"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/descrip3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/symptom3"
+            android:text="3. Dark-green streaks (&quot;Morse code,&quot; or intermittent dark and light green leaf vein coloration) will show on the under leaf surface soon after infection (Magee 1927)."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <ImageView
+            android:id="@+id/symptom4"
+            android:layout_width="200dp"
+            android:layout_height="205dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/descrip3"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s4"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/symptom4"
+            android:text="4. Characteristic streaking with darker green lines also shows on the petiole on BBTV-infected plants."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <ImageView
+            android:id="@+id/symptom5"
+            android:layout_width="200dp"
+            android:layout_height="195dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/descrip4"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s5"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="6dp"/>
+
+        <TextView
+            android:id="@+id/descrip5"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/symptom5"
+            android:text="5. &quot;J hooks&quot; are found close to the leaf center. They are a continuation of the &quot;Morse code&quot; found in BBTV-infected banana leaves."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <ImageView
+            android:id="@+id/symptom6"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/descrip5"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s6"
+            android:background="@drawable/border_thin"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/descrip6"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/symptom6"
+            android:text="6. Leaf shoots appear bunchy and upright."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <ImageView
+            android:id="@+id/symptom7"
+            android:layout_width="200dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/descrip6"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s7"
+            android:background="@drawable/border_thin"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/descrip7"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/symptom7"
+            android:text="7. Infection on older plants produces narrow, stiff, and upright leaves."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <ImageView
+            android:id="@+id/symptom8"
+            android:layout_width="200dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/descrip7"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/s8"
+            android:background="@drawable/border_thin"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/descrip8"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="85dp"
+            android:layout_below="@id/symptom8"
+            android:text="8.  These stiff leaves curl inward, with wavy leaf edges."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"
+            />
+
+    </RelativeLayout>
+</ScrollView>

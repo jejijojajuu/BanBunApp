@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Results">
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:text="RESULTS:"
+        android:textSize="25sp"
+        android:fontFamily="@font/montserrat_font"
+        android:textStyle="italic"
+        android:textColor="@color/title" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_below="@id/results"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sample_dataset"
+        android:background="@drawable/image_border"
+        android:paddingHorizontal="8dp" />
+
+    <TextView
+        android:id="@+id/legends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/image"
+        android:text="LEGENDS"
+        android:textStyle="bold"
+        android:textColor="@color/title"/>
+
+    <View
+        android:id="@+id/redBox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/outline_red"
+        android:layout_below="@id/legends"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Positive"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/redBox"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/title"/>
+
+    <View
+        android:id="@+id/blueBox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/outline_blue"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/positive"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Negative"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/blueBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/title"/>
+
+    <View
+        android:id="@+id/yellowBox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/outline_yellow"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/negative"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/buffer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buffer"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/yellowBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/title"/>
+
+</RelativeLayout>

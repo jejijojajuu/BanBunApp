@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Classifier">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/gallery"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="CHOOSE FROM GALLERY"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/gallery"
+        android:backgroundTint="@color/yellow"
+        android:text="CAPTURE FROM CAMERA"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="280dp"
+        android:layout_height="370dp"
+        android:layout_below="@id/gallery"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sample_dataset"
+        android:background="@drawable/image_border"
+        android:paddingHorizontal="8dp" />
+
+    <TextView
+        android:id="@+id/legends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/image"
+        android:text="LEGENDS"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/redBox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/outline_red"
+        android:layout_below="@id/legends"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Positive"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/redBox"
+        android:layout_marginStart="10dp"/>
+
+    <View
+        android:id="@+id/blueBox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/outline_blue"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/positive"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Negative"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/blueBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <View
+        android:id="@+id/yellowBox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/outline_yellow"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/negative"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/buffer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buffer"
+        android:layout_below="@id/legends"
+        android:layout_toEndOf="@id/yellowBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <Button
+        android:id="@+id/detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DETECT"
+        android:layout_below="@id/negative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/default_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your image is set now."
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/detect"/>
+
+</RelativeLayout>
