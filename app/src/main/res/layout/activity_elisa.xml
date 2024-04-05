@@ -1,23 +1,400 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".ELISA">
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ELISA">
 
-    <TextView
-        android:id="@+id/bbtv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
-        android:text="ELISA"
-        android:textSize="25sp"
-        android:fontFamily="@font/montserrat_font"
-        android:textStyle="italic"
-        android:textColor="@color/title"/>
+        <TextView
+            android:id="@+id/elisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp"
+            android:text="ELISA"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/elisa_photo"
+            android:layout_width="310dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/elisa"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/elisa"
+            android:background="@drawable/image_border"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/elisa_photo"
+            android:layout_marginTop="30dp"
+            android:text="      ELISA (enzyme-linked immunosorbent assay) is a method used to quantitatively detect an antigen within a sample. An antigen is a toxin or other foreign substance, for example a flu virus or environmental contaminant, that causes the vertebrate immune system to mount a defensive response. The range of potential antigens is vast, so ELISAs are used in many areas of research and testing to detect and quantify antigens in a wide variety of sample types. Cell lysates, blood samples, food items, and more can be analyzed for specific substances of interest using ELISAs. \n\n      There are four major types of ELISAs: direct, indirect, competitive and sandwich. \n\n      Most sandwich ELISAs are run in microplates, with the bottom of the plate wells serving as the solid surface to which antibodies and other reagents bind. A microplate washer is used to wash away non-specific material in the wells, and an absorbance ELISA microplate reader detects the color change produced when target antigen is present. And, a plate reader software is used to plot standard curves and calculate results."        android:textSize="15sp"
+            android:fontFamily="@font/montserrat_font"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/details"
+            android:text="Source: \nhttps://www.moleculardevices.com/applications/enzyme-linked-immunosorbent-assay-elisa#workflow"
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="370dp"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/source"/>
+
+        <TextView
+            android:id="@+id/title_workflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/line"
+            android:text="Workflow"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <TextView
+            android:id="@+id/sandwich"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title_workflow"
+            android:text="Sandwich ELISA Assay"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title" />
+
+        <TextView
+            android:id="@+id/step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sandwich"
+            android:text="Step 1:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step1_photo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step1"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e1"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <ImageView
+            android:id="@+id/step1_2_photo"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step1_photo"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e1_2"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step1_2_photo"
+            android:text="First, the capture antibody is bound to the bottom of the microplate well."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/step2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrip1"
+            android:text="Step 2:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step2_photo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step2"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e2"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step2_photo"
+            android:text="Sample is added to the well, and antigen within the sample binds to the capture antibody."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/step3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrip2"
+            android:text="Step 3:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step3_photo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step3"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e3"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step3_photo"
+            android:text="Unbound material is washed away, leaving only the antigen of interest and minimizing the potential for high background signal."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/step4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrip3"
+            android:text="Step 4:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step4_photo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step4"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e4"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step4_photo"
+            android:text="Enzyme-conjugated detection antibody binds to a second site on the antigen of interest, providing the means to detect the antigen. "
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/step5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrip4"
+            android:text="Step 5:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step5_photo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step5"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e5"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip5"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step5_photo"
+            android:text="Unbound antibodies are washed away, leaving only those specific for the target of interest and again minimizing the potential for background signal. "
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/step6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrip5"
+            android:text="Step 6:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step6_photo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step6"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e6"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip6"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step6_photo"
+            android:text="Substrate is converted by the enzyme on the detection antibody, producing a color change, with intensity proportional to the amount of antigen present. \n\nDepending on the enzyme and substrate used, the readout can also be fluorescent or luminescent."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/step7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrip6"
+            android:text="Step 7:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step7_photo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step7"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e7"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip7"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/step7_photo"
+            android:text="The microplate reader detects the colored reaction product and outputs optical density (OD) values that indicate how much light is absorbed by the contents of each well."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+        <TextView
+            android:id="@+id/step8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descrip7"
+            android:text="Step 8:"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat_font"
+            android:textStyle="italic"
+            android:textColor="@color/title"/>
+
+        <ImageView
+            android:id="@+id/step8_photo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/step8"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/e8"
+            android:background="@drawable/border_thin"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/descrip8"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="85dp"
+            android:layout_below="@id/step8_photo"
+            android:text="The amount of antigen in each sample is calculated, and different samples—for example, cells subjected to different treatment conditions—can be compared."
+            android:fontFamily="@font/montserrat_font"
+            android:textSize="15sp"
+            android:textColor="@color/title"
+            android:justificationMode="inter_word"/>
+
+    </RelativeLayout>
+</ScrollView>

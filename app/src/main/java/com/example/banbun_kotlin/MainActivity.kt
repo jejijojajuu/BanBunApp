@@ -1,14 +1,11 @@
 package com.example.banbun_kotlin
 
-import Classifier
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.banbun_kotlin.databinding.ActivityMainBinding
 
@@ -28,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.home -> replaceFragment(Home())
                 R.id.resources -> replaceFragment(Resources())
-                R.id.classifier -> replaceFragment(Classifier())
+                R.id.classify -> replaceFragment(Classify())
                 R.id.guide -> replaceFragment(Guide())
                 R.id.profile -> replaceFragment(Profile())
 

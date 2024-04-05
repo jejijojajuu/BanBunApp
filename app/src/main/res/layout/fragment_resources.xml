@@ -14,7 +14,7 @@
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="85dp"
-        android:src="@drawable/png_logo" />
+        android:src="@drawable/banbun_logo" />
 
     <TextView
         android:id="@+id/title"
