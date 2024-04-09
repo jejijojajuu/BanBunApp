@@ -1,33 +1,40 @@
-package com.example.banbun_kotlin
-
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Bundle
 import android.provider.MediaStore
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import kotlinx.coroutines.*
+import androidx.fragment.app.Fragment
+import com.example.banbun_kotlin.R
+import com.example.banbun_kotlin.Results
+import com.example.banbun_kotlin.ml.MobilenetV110224Quant
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import org.tensorflow.lite.DataType
+import org.tensorflow.lite.support.image.ImageProcessor
+import org.tensorflow.lite.support.image.TensorImage
+import org.tensorflow.lite.support.image.ops.ResizeOp
+import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private const val REQUEST_IMAGE_CAPTURE = 101
+private const val REQUEST_IMAGE_GALLERY = 102
+private const val DELAY_MILLISECONDS = 1000L
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Classify.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Classify : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -35,6 +42,7 @@ class Classify : Fragment() {
     private lateinit var cameraButton: Button
     private lateinit var galleryButton: Button
     private lateinit var detectButton: Button
+//    private lateinit var bitmap: Bitmap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,9 +63,17 @@ class Classify : Fragment() {
         galleryButton = view.findViewById(R.id.gallery)
         detectButton = view.findViewById(R.id.detect)
 
+        var imageProcessor = ImageProcessor.Builder()
+            .add(ResizeOp(224, 224, ResizeOp.ResizeMethod.BILINEAR))
+            .build()
+
         cameraButton.setOnClickListener {
             cameraButton.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.pressed_color))
-            dispatchTakePictureIntent()
+            if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                dispatchTakePictureIntent()
+            } else {
+                ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.CAMERA), REQUEST_IMAGE_CAPTURE)
+            }
             resetButtonColorDelayed(cameraButton, DELAY_MILLISECONDS)
         }
 
@@ -68,14 +84,27 @@ class Classify : Fragment() {
         }
 
         detectButton.setOnClickListener {
+
             detectButton.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.pressed_color))
             resetButtonColorDelayed(detectButton, DELAY_MILLISECONDS)
-        }
 
-        val detectButton = view.findViewById<Button>(R.id.detect)
-        detectButton.setOnClickListener {
-            val intent = Intent(requireContext(), Results::class.java)
-            startActivity(intent)
+//            var tensorImage = TensorImage(DataType.UINT8)
+//            tensorImage.load(bitmap)
+//
+//            tensorImage = imageProcessor.process(tensorImage)
+//
+//            val model = MobilenetV110224Quant.newInstance(requireContext())
+//
+//            val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.UINT8)
+//            inputFeature0.loadBuffer(tensorImage.buffer)
+//
+//            val outputs = model.process(inputFeature0)
+//            val outputFeature0 = outputs.outputFeature0AsTensorBuffer
+//
+//            var maxIdx = 0
+//
+//
+//            model.close()
         }
 
         return view
@@ -91,10 +120,13 @@ class Classify : Fragment() {
     private fun openGallery() {
         val pickPhoto = Intent(
             Intent.ACTION_PICK,
-            android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-        )
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+        ).apply {
+            type = "image/*"
+        }
         startActivityForResult(pickPhoto, REQUEST_IMAGE_GALLERY)
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -121,20 +153,6 @@ class Classify : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Classify.
-         */
-        // TODO: Rename and change types and number of parameters
-
-        private const val REQUEST_IMAGE_CAPTURE = 101
-        private const val REQUEST_IMAGE_GALLERY = 102
-        private const val DELAY_MILLISECONDS = 1000L // Adjust the delay in milliseconds here
-
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             Classify().apply {

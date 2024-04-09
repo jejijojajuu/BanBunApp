@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135620019280",
+    "project_id": "banbun-login",
+    "storage_bucket": "banbun-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135620019280:android:3d1661d8d928f8c831bd55",
+        "android_client_info": {
+          "package_name": "com.example.banbun_kotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6GCTPu-FAMaN3_x9joZba7LGVAm4oaRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

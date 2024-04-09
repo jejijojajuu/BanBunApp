@@ -1,5 +1,7 @@
 package com.example.banbun_kotlin
 
+import Classify
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
@@ -20,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
         replaceFragment(Home())
+
+//        val loginIntent = Intent(this, Login::class.java)
+//        startActivity(loginIntent)
+//        finish()
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
