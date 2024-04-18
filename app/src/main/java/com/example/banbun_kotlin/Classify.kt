@@ -6,12 +6,14 @@ import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.os.Message
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -136,10 +138,12 @@ class Classify : Fragment() {
                     val extras = data?.extras
                     val imageBitmap = extras?.get("data") as Bitmap
                     imageView.setImageBitmap(imageBitmap)
+                    view?.findViewById<TextView>(R.id.default_message)?.text = "Image captured from camera is set."
                 }
                 REQUEST_IMAGE_GALLERY -> {
                     val selectedImage: Uri? = data?.data
                     imageView.setImageURI(selectedImage)
+                    view?.findViewById<TextView>(R.id.default_message)?.text = "Chosen image from gallery is set."
                 }
             }
         }

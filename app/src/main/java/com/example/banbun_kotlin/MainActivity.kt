@@ -30,10 +30,8 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home -> replaceFragment(Home())
-                R.id.resources -> replaceFragment(Resources())
                 R.id.classify -> replaceFragment(Classify())
-                R.id.guide -> replaceFragment(Guide())
-                R.id.profile -> replaceFragment(Profile())
+                R.id.resources -> replaceFragment(Resources())
 
                 else -> {
 

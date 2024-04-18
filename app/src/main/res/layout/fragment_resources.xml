@@ -47,8 +47,8 @@
         android:layout_height="60dp"
         android:layout_below="@id/slogan"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:text="Ano ang BBTV? "
+        android:layout_marginTop="50dp"
+        android:text="Ano ang BBTV?"
         android:textSize="16sp"
         android:backgroundTint="@color/yellow"
         android:textColor="@color/title"/>
@@ -65,5 +65,16 @@
         android:backgroundTint="@color/yellow"
         android:textColor="@color/title"/>
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Paano gamitin ang BANBUN app?"
+        android:textSize="16sp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/title"/>
 
 </RelativeLayout>

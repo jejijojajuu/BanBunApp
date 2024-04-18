@@ -4,9 +4,9 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
 
     <application
         android:allowBackup="true"
@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Banbun_kotlin"
         tools:targetApi="31">
+        <activity
+            android:name=".Copy"
+            android:exported="false" />
         <activity
             android:name=".SignUp"
             android:exported="false" />

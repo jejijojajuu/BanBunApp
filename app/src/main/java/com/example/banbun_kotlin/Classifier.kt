@@ -16,6 +16,21 @@
     import androidx.core.content.ContextCompat
     import kotlinx.coroutines.*
 
+    // DISREGARD!!!
+    // OLD
+    // FILE
+    // FOR
+    // CLASSIFIER
+    // PAGE
+    // WITH
+    // ERRORS,
+    // FOR
+    // UPDATED
+    // FILE,
+    // GO
+    // TO
+    // CLASSIFY
+
     class Classifier : Fragment() {
 
         private lateinit var imageView: ImageView

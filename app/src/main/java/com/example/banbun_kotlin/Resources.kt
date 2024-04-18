@@ -61,6 +61,14 @@ class Resources : Fragment() {
             startActivity(intent)
         }
 
+        val guideButton = view.findViewById<Button>(R.id.button3)
+        guideButton.setOnClickListener {
+            guideButton.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.pressed_color))
+            resetButtonColorDelayed(guideButton, DELAY_MILLISECONDS)
+            val intent = Intent(requireContext(), Copy::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 

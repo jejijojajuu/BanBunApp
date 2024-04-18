@@ -6,6 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+// DISREGARD!!!
+// OLD
+// FILE
+// FOR
+// GUIDE
+// PAGE,
+// MOVED
+// TO
+// RESOURCES
+// PAGE,
+// FOR
+// UPDATED
+// FILE,
+// GO
+// TO
+// GUIDES
+
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
