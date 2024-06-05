@@ -19,7 +19,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.banbun_kotlin.R
 import com.example.banbun_kotlin.Results
-import com.example.banbun_kotlin.ml.MobilenetV110224Quant
+//import com.example.banbun_kotlin.ml.MobilenetV110224Quant
+import com.example.banbun_kotlin.ml.Model
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -58,7 +59,7 @@ class Classify : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_classifier, container, false)
+        val view = inflater.inflate(R.layout.fragment_classify, container, false)
 
         imageView = view.findViewById(R.id.image)
         cameraButton = view.findViewById(R.id.camera)
